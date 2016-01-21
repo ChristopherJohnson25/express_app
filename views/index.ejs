@@ -6,18 +6,18 @@
   <script src="/jquery/dist/jquery.js"></script>
 </head>
 <body>
-  <h1></h1>
+  <h1>Rats</h1>
   <form method="POST" action="/rats">
     <label for="rat-name">Name</label>
-    <input type="text" name="rat[name]" id="rat-name">
+    <input type="text" placeholder="Name Can't Be Blank" name="rat[name]" id="rat-name">
     <input type="submit" value="Create">
-    <div id="form_status"></div>
+    <div id="form_status">
+      <p>Name can't be blank!</p>
+    </div>
   </form>
   <ul>
   <% rats.forEach(function(rat){ %>
-    <li>
-      <%= rat.name %>
-    </li>
+    <li><%= rat.name %></li>
   <% }) %>
   </ul>
   <script src="/javascripts/main.js"></script>
